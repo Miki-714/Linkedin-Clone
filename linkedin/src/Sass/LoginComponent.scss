@@ -1,0 +1,113 @@
+$linkedinBlue1: #0072b1;
+$linkedinBlue2: #0073b1;
+$linkedinBlue3: #004c75;
+body {
+  margin: 0;
+  padding: 0;
+}
+.login-wrapper {
+  background-color: white;
+  .login-wrapper-innter {
+    margin-left: 200px;
+  }
+  .heading {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.9);
+  }
+
+  .sub-heading {
+    margin-top: -20px;
+  }
+}
+.login-btn {
+  width: 300px;
+  height: 50px;
+  cursor: pointer;
+  color: #ffffff;
+  background-color: $linkedinBlue2;
+  border-radius: 30px;
+  outline: none;
+  border: none;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  margin-top: 20px;
+}
+.login-btn:hover {
+  background-color: $linkedinBlue3;
+}
+.auth-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 300px;
+}
+.common-input {
+  height: 30px;
+  padding: 10px;
+  outline: none;
+  border: 1px solid #212121;
+  border-radius: 3px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  margin: 10px 0px;
+}
+.common-input:focus {
+  outline: 1px solid $linkedinBlue1;
+}
+::placeholder {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+}
+
+.linkedinLogo {
+  width: 60px;
+}
+
+.hr-text {
+  margin-left: 200px;
+  line-height: 1em;
+  position: relative;
+  outline: 0;
+  border: 0;
+  color: black;
+  text-align: center;
+  height: 1.5em;
+  opacity: 0.5;
+  &:before {
+    content: "";
+    // use the linear-gradient for the fading effect
+    // use a solid background color for a solid bar
+    background: linear-gradient(to right, transparent, #818078, transparent);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+  }
+  &:after {
+    content: attr(data-content);
+    position: relative;
+    display: inline-block;
+    color: black;
+
+    padding: 0 0.5em;
+    line-height: 1.5em;
+    // this is really the only tricky part, you need to specify the background color of the container element...
+    color: #818078;
+    background-color: #fcfcfa;
+  }
+}
+
+.google-btn-container {
+  margin-left: 230px;
+  .google-btn {
+    width: 300px !important;
+  }
+}
